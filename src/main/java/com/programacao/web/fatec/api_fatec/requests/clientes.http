@@ -1,0 +1,29 @@
+### Listar todos
+GET http://localhost:8081/api/clientes
+
+### Listar filtrando por nome (query param)
+GET http://localhost:8081/api/clientes?nome=jo
+
+### Buscar por ID
+GET http://localhost:8081/api/clientes/1
+
+### Criar cliente (id gerado pelo H2; não envie id)
+POST http://localhost:8081/api/clientes
+Content-Type: application/json
+
+{
+  "nome": "Mario",
+  "endereco": "Rua ABC"
+}
+
+### Atualizar cliente
+PUT http://localhost:8081/api/clientes/1
+Content-Type: application/json
+
+{
+  "nome": "Mario Atualizado",
+  "endereco": "Rua DEF"
+}
+
+### Remover cliente
+DELETE http://localhost:8081/api/clientes/1
